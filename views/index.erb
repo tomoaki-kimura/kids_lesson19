@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>条件分岐をマスターしよう</title>
+  </head>
+  <body>
+    <h3>フィズバズ</h3>
+    <p>フォームに入力されたデータから、どの数字がフィズバズか試してみましょう</p>
+
+    <img src="/robot.png" alt="ロボット画像">
+    <p>FizzBuzzとなる数字は、<%= @fizz_buzz %>です。</p>
+    <p>Fizzとなる数字は、<%= @fizz %>です。</p>
+    <p>Buzzとなる数字は、<%= @buzz %>です。</p>
+    <form action="/" method="GET">
+      <label>始めの数字: <input type="number" name="start" placeholder="数字を半角英数で入力して下さい"></label>
+      <label>終わる数字: <input type="number" name="goal" placeholder="数字を半角英数で入力して下さい"></label>
+      <input type="submit" value="送信">
+    </form>
+  </body>
+</html>
