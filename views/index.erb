@@ -17,5 +17,10 @@
       <label>終わる数字: <input type="number" name="goal" placeholder="数字を半角英数で入力して下さい"></label>
       <input type="submit" value="送信">
     </form>
+    <ul>
+      <% @results.each do |result| %>
+        <li><%= result %></li>
+      <% end %>
+    </ul>
   </body>
 </html>
