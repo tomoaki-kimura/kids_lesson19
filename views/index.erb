@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <title>条件分岐をマスターしよう</title>
-  </head>
-  <body>
-    <h3>フィズバズ</h3>
-    <p>フォームに入力されたデータから、どの数字がフィズバズか試してみましょう</p>
-
-    <img src="/robot.png" alt="ロボット画像">
-    <p>FizzBuzzとなる数字は、<%= @fizz_buzz %>です。</p>
-    <p>Fizzとなる数字は、<%= @fizz %>です。</p>
-    <p>Buzzとなる数字は、<%= @buzz %>です。</p>
-    <form action="/" method="GET">
-      <label>始めの数字: <input type="number" name="start" placeholder="数字を半角英数で入力して下さい"></label>
-      <label>終わる数字: <input type="number" name="goal" placeholder="数字を半角英数で入力して下さい"></label>
-      <input type="submit" value="送信">
+<head>
+  <meta charset="UTF-8">
+  <title>FizzBuzz</title>
+  <link href="/layout.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+  <div class="greeting-contents">
+    <div class="illust">
+      <img src="illust.svg" alt="パーティピーポー">
+    </div>
+    <div class="try">
+      フォームに入力されたデータから、どの数字がフィズバズか試してみましょう
+    </div>
+    <form action="/" method="GET" class="form">
+      <input id="number-start" type="text" name="number_start" placeholder="始めの数字">
+      <span>~</span>
+      <input id="number-end" type="text" name="number_end" placeholder="終わりの数字">
+      <input type="submit" value="送信する">
     </form>
-    <ul>
+    <div class="result">
       <% @results.each do |result| %>
-        <li><%= result %></li>
+        <div class="result-number <%= result[1].downcase if result[1].class == String %>">
+          <%= result[0] %>
+          <span class="<%= result[1].downcase if result[1].class == String %>"><%= '"' + result[1] + '"' if result[1].class == String %></span>
+        </div>
       <% end %>
-    </ul>
-  </body>
+    </div>
+  </div>
+</div>
+</body>
 </html>

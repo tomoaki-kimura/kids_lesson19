@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    padding: 30px;
+}
+
+.greeting-contents {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.illust {
+  line-height: 0;
+}
+
+.try {
+    margin: 60px 0 30px;
+    line-height: 2em;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form span {
+    margin: 0 10px;
+}
+
+.form input[type="text"] {
+    width: 150px;
+    padding: 15px;
+    font-size: 16px;
+    border: 3px solid #999;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form input[type="submit"] {
+    display: block;
+    padding: 15px 45px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #39cc00;
+    cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #00a000;
+}
+
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.result span {
+    margin: 0 5px;
+}
+
+.result-number {
+    list-style: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 0 10px 10px 0;
+    background-color: #f7f7f7;
+}
+
+.fizz,
+.buzz,
+.fizzbuzz {
+    font-weight: bold;
+}
+
+.fizz {
+    background-color: #FFEA55;
+}
+
+.buzz {
+    background-color: #FF99BD;
+}
+
+.fizzbuzz {
+    background-color: #80DFFF;
+}
